@@ -35,3 +35,12 @@ ALTER TABLE employee_payroll ADD gender char(1) AFTER name ;
 UPDATE  employee_payroll SET gender = 'F' WHERE name='TERISA';
 
 UPDATE  employee_payroll SET gender = 'M' WHERE name='BILl' OR name = 'CHARLIE';
+
+UPDATE employee_payroll SET salary = 4000000 WHERE name = 'TERISA';
+
+SELECT GENDER , SUM(salary) FROM employee_payroll WHERE gender = 'M' GROUP BY GENDER ;
+
+SELECT gender , AVG(salary) FROM employee_payroll WHERE gender = 'F' GROUP BY GENDER ;
+
+SELECT gender , COUNT (name) FROM employee_payroll  GROUP BY GENDER ;
+
