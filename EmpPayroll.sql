@@ -29,3 +29,9 @@ WHERE name = 'BILL';
 
 SELECT * FROM employee_payroll
 WHERE Start_date BETWEEN CAST('2019-01-03' AS DATE) and DATE (NOW());
+
+ALTER TABLE employee_payroll ADD gender char(1) AFTER name ;
+
+UPDATE  employee_payroll SET gender = 'F' WHERE name='TERISA';
+
+UPDATE  employee_payroll SET gender = 'M' WHERE name='BILl' OR name = 'CHARLIE';
