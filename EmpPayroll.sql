@@ -44,3 +44,14 @@ SELECT gender , AVG(salary) FROM employee_payroll WHERE gender = 'F' GROUP BY GE
 
 SELECT gender , COUNT (name) FROM employee_payroll  GROUP BY GENDER ;
 
+ALTER TABLE employee_payroll ADD phone_number VARCHAR(255) AFTER NAME ;
+
+ALTER TABLE employee_payroll ADD address VARCHAR(255) AFTER phone_number ;
+
+ALTER TABLE employee_payroll ADD department VARCHAR(255) NOT NULL AFTER address ;
+
+ALTER TABLE employee_payroll ALTER department SET DEFAULT  'TBD' ;
+
+
+
+
